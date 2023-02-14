@@ -1,0 +1,39 @@
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+  min-height: 60px;
+}
+
+.user-list__link {
+  padding: 22px;
+  text-decoration: none;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 80px;
+
+    &:hover,
+    &:focus {
+      color: @base-primary;
+    }
+
+    &:hover .user-list__icon,
+    &:focus .user-list__icon {
+      fill: @base-primary;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    padding: 32px 20px;
+  }
+}

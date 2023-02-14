@@ -1,0 +1,58 @@
+.swiper .swiper__button {
+  top: 23px;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  color: @base-primary;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    font-size: 20px;
+  }
+}
+
+.swiper .swiper-button-next {
+  left: auto;
+  right: 0;
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-bottom: 56px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: @base-white;
+  border-radius: 0;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-opacity;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: @base-primary;
+  }
+
+  &:focus-visible {
+    background-color: @primary-opacity;
+  }
+
+  &:active {
+    background-color: @base-primary;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: @base-primary;
+}

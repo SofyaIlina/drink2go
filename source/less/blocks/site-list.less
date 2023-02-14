@@ -1,0 +1,44 @@
+.site-list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+  border-top: 1px solid @base-secondary;
+  z-index: 2;
+
+  @media (max-width: @mobile-width-only) {
+    &--close {
+      display: none;
+    }
+
+    &--no-js {
+      display: block;
+      position: static;
+      order: 1;
+    }
+  }
+}
+
+.site-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: @base-black;
+  background-color: @base-white;
+  border-bottom: 1px solid @base-secondary;
+  min-height: 57px;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}

@@ -1,0 +1,65 @@
+.features {
+  text-align: center;
+  padding: 50px 20px 28px;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.features__subtitle {
+  margin: 0 0 36px;
+}
+
+.features__list {
+  margin: 0;
+}
+
+.features__item {
+  padding-top: 66px;
+  margin-bottom: 32px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--speed::before {
+    background-image: url("../../img/icons/stack.svg#speed");
+  }
+
+  &--fit::before {
+    background-image: url("../../img/icons/stack.svg#fit");
+  }
+
+  &--energy::before {
+    background-image: url("../../img/icons/stack.svg#energy");
+  }
+
+  &--ecology::before {
+    background-image: url("../../img/icons/stack.svg#ecology");
+  }
+}
+
+.features__name {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.features__value {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
