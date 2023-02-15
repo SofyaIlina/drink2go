@@ -15,16 +15,22 @@
   color: @base-black;
   text-decoration: none;
   padding-left: 20px;
-  min-height: 60px;
   display: flex;
   align-items: center;
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 80px;
+  }
+}
+
+.header__logo-image {
+  width: 82px;
 }
 
 .header__logo-text {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
+  @media (max-width: @tablet-width) {
+    display: none;
   }
 }
 

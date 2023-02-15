@@ -1,16 +1,17 @@
 .site-list {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
   list-style-type: none;
-  border-top: 1px solid @base-secondary;
-  z-index: 2;
-
+  
   @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid @base-secondary;
+    z-index: 2;
+
     &--close {
       display: none;
     }
@@ -20,6 +21,10 @@
       position: static;
       order: 1;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
@@ -36,9 +41,20 @@
   color: @base-black;
   background-color: @base-white;
   border-bottom: 1px solid @base-secondary;
-  min-height: 57px;
+  min-height: 60px;
 
   &:active {
     background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+    border: none;
+    min-height: 80px;
+
+    &--current {
+      color: @base-primary;
+      border-bottom: 2px solid;
+    }
   }
 }
