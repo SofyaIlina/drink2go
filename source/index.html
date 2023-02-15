@@ -89,7 +89,7 @@
               <div class="promo__description">
                 <span class="promo__badge badge">Новинка!</span>
                 <h3 class="promo__heading">Декаф Флэт Уайт</h3>
-                <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="promo__price-wrapper">
                   <span class="promo__old-price">295₽</span>
                   <span class="promo__new-price">225₽</span>
@@ -175,69 +175,87 @@
         <form class="catalog__form sort-form">
           <fieldset class="sort-form__element">
             <label class="sort-form__legend" for="min-price">Цена</label>
-            <input id="min-price" name="min-price" type="number" placeholder="0"
-            required
-            min="0"
-            max="100000">
-            <label class="sort-form__legend" for="max-price">Цена</label>
-            <input id="max-price" name="max-price" type="number" placeholder="900"
-            required
-            min="0"
-            max="100000">
+            <div class="sort-form__range range">
+              <div class="range__scale">
+                <div class="range__bar">
+                  <button class="range__toggle range__toggle--min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range__toggle range__toggle--max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <input class="sort-form__input-range" id="min-price" name="min-price" type="number" placeholder="0" required min="0" max="100000">
+            <label class="sort-form__legend sort-form__legend--max-price" for="max-price">–</label>
+            <input class="sort-form__input-range" id="max-price" name="max-price" type="number" value="900" required min="0" max="100000">
           </fieldset>
-          <fieldset class="sort-form__element">
+          <fieldset class="sort-form__element sort-form__element--have-milk">
             <legend class="sort-form__legend">Наличие молока</legend>
             <p class="sort-form__input">
               <input class="sort-form__radio visually-hidden" type="radio" id="either" name="have-milk" value="1"
                   checked>
-              <label class="sort-form__label sort-form__label--radio" for="either">Неважно</label>
+              <span class="sort-form__radio-mark"></span>
+              <label class="sort-form__label" for="either">Неважно</label>
             </p>
 
             <p class="sort-form__input">
               <input class="sort-form__radio visually-hidden" type="radio" id="only-animal" value="2" name="have-milk">
-              <label class="sort-form__label sort-form__label--radio" for="only-animal">Только животное</label>
+              <span class="sort-form__radio-mark"></span>
+              <label class="sort-form__label" for="only-animal">Только животное</label>
             </p>
             <p class="sort-form__input">
               <input class="sort-form__radio visually-hidden" type="radio" id="only-vegetable" value="3" name="have-milk">
-              <label class="sort-form__label sort-form__label--radio" for="only-vegetable">Только растительное</label>
+              <span class="sort-form__radio-mark"></span>
+              <label class="sort-form__label" for="only-vegetable">Только растительное</label>
             </p>
             <p class="sort-form__input">
-              <input class="sort-form__radio visually-hidden" type="radio" id="without-milk" value="4" name="have-milk">
-              <label class="sort-form__label sort-form__label--radio" for="without-milk">Без молока</label>
+              <input class="sort-form__radio visually-hidden" type="radio" id="without-milk" value="4" name="have-milk" disabled>
+              <span class="sort-form__radio-mark"></span>
+              <label class="sort-form__label" for="without-milk">Без молока</label>
             </p>
           </fieldset>
 
-          <fieldset class="sort-form__element">
+          <fieldset class="sort-form__element sort-form__element--made-in">
             <legend class="sort-form__legend">Страна произрастания</legend>
 
             <p class="sort-form__input">
               <input class="sort-form__checkbox visually-hidden" type="checkbox" id="brazil" name="brazil"
                 checked>
-              <label class="sort-form__label sort-form__label--checkbox" for="brazil">Бразилия</label>
+              <span class="sort-form__checkbox-mark"></span>
+              <label class="sort-form__label" for="brazil">Бразилия</label>
             </p>
 
             <p class="sort-form__input">
               <input class="sort-form__checkbox visually-hidden" type="checkbox" id="ethiopia" name="ethiopia">
-              <label class="sort-form__label sort-form__label--checkbox" for="ethiopia">Эфиопия</label>
+              <span class="sort-form__checkbox-mark"></span>
+              <label class="sort-form__label" for="ethiopia">Эфиопия</label>
             </p>
             <p class="sort-form__input">
               <input class="sort-form__checkbox visually-hidden" type="checkbox" id="colombia" name="colombia">
-              <label class="sort-form__label sort-form__label--checkbox" for="colombia">Колумбия</label>
+              <span class="sort-form__checkbox-mark"></span>
+              <label class="sort-form__label" for="colombia">Колумбия</label>
             </p>
             <p class="sort-form__input">
               <input class="sort-form__checkbox visually-hidden" type="checkbox" id="costa-rica" name="costa-rica">
-              <label class="sort-form__label sort-form__label--checkbox" for="costa-rica">Коста-Рика</label>
+              <span class="sort-form__checkbox-mark"></span>
+              <label class="sort-form__label" for="costa-rica">Коста-Рика</label>
             </p>
             <p class="sort-form__input">
               <input class="sort-form__checkbox visually-hidden" type="checkbox" id="peru" name="peru">
-              <label class="sort-form__label sort-form__label--checkbox" for="peru">Перу</label>
+              <span class="sort-form__checkbox-mark"></span>
+              <label class="sort-form__label" for="peru">Перу</label>
             </p>
           </fieldset>
-          <button class="sort-form__apply" type="button">Применить фильтр</button>
-          <button class="sort-form__reset" type="reset">Сбросить фильтр</button>
-          <div class="sort-form__element">
-            <label class="sort-form__legend" for="sort">Сортировка:</label>
-            <select class="sort-form__select-control" id="sort">
+          <div class="sort-form__button-wrapper">
+            <button class="sort-form__button sort-form__button--apply button" type="button">Применить фильтр</button>
+          <button class="sort-form__button sort-form__button--reset button" type="reset">Сбросить фильтр</button>
+          </div>
+          
+          <div class="sort-form__element sort-form__element--sort">
+            <label class="sort-form__legend sort-form__legend--sort" for="sort">Сортировка:</label>
+            <select class="sort-form__select" id="sort">
               <option value="popular">по умолчанию</option>
               <option value="price">сначала дорогие</option>
               <option value="discount">сначала дешёвые</option>
@@ -248,11 +266,11 @@
 
         <ul class="catalog__list">
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/milk.png" width="130" height="188" alt="Стаканчик молочного цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">
@@ -264,11 +282,11 @@
             </div>
           </li>
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/lavender.png" width="130" height="188" alt="Стаканчик лавандового цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">
@@ -280,11 +298,11 @@
             </div>
           </li>
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/black.png" width="130" height="188" alt="Стаканчик чёрного цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии c&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">
@@ -296,11 +314,11 @@
             </div>
           </li>
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/pink.png" width="130" height="188" alt="Стаканчик розового цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">
@@ -312,11 +330,11 @@
             </div>
           </li>
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/chocolate.png" width="130" height="188" alt="Стаканчик шоколадного цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">
@@ -328,11 +346,11 @@
             </div>
           </li>
           <li class="product-card">
-            <a href="#">
+            <a class="product-card__link" href="#">
               <img class="product-card__image" src="img/catalog/vanilla.png" width="130" height="188" alt="Стаканчик ванильного цвета">
               <h4 class="product-card__name">Декаф Флэт Уайт</h4>
             </a>
-            <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+            <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
               <a class="product-card__button" href="#">

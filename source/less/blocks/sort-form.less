@@ -1,0 +1,175 @@
+.sort-form__element {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  &--have-milk {
+    flex-direction: column;
+  }
+
+  &--made-in {
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  &--sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+
+.sort-form__legend {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 0;
+
+  &--max-price {
+    text-align: center;
+    align-self: center;
+    width: 44px;
+    color: @base-grey;
+    margin: 0;
+  }
+
+  &--sort {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.sort-form__range {
+  margin-bottom: 25px;
+}
+
+.sort-form__input-range {
+  border: 2px solid @primary-lighter;
+  border-radius: 4px;
+  width: 118px;
+  text-align: center;
+  padding: 5px 8px;
+
+  &::placeholder {
+    font-family: @montserrat;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:active {
+    font-family: @montserrat;
+    color: @base-black;
+  }
+}
+
+.sort-form__input {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+}
+
+.sort-form__input:last-child {
+  margin: 0;
+}
+
+.sort-form__radio-mark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @base-grey;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sort-form__radio:checked + .sort-form__radio-mark {
+  border-color: @base-primary;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: @base-primary;
+  }
+}
+
+.sort-form__radio:disabled + .sort-form__radio-mark,
+.sort-form__radio:disabled ~ .sort-form__label {
+  border-color: @light-grey;
+  color: @light-grey;
+}
+
+.sort-form__checkbox-mark {
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  background-color: @base-grey;
+  border-radius: 12px;
+  margin-right: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2px;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @base-white;
+  }
+}
+
+.sort-form__checkbox:checked + .sort-form__checkbox-mark {
+  background-color: @base-primary;
+
+  &::before {
+    left: auto;
+    right: 2px;
+  }
+}
+
+.sort-form__button-wrapper {
+  display: grid;
+  row-gap: 25px;
+  padding: 0 60px;
+  margin-bottom: 40px;
+}
+
+.sort-form__button {
+  font-size: 13px;
+  padding: 11px 14px;
+
+  &--reset {
+    color: @base-primary;
+    background-color: @base-white;
+  }
+}
+
+.sort-form__select {
+  font-family: @montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: @base-primary;
+  border: none;
+  background-color: transparent;
+  width: 165px;
+  text-align: center;
+}
