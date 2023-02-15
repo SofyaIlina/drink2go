@@ -9,7 +9,7 @@ const MAP_CENTER = {
 };
 
 const pinIcon = L.icon({
-  iconUrl: './img/map-pin.svg',
+  iconUrl: '../img/map/map-pin.svg',
   iconSize: [38, 50],
   iconAnchor: [19, 50],
 });

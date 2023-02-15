@@ -14,7 +14,9 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   </head>
   <body class="page__body">
@@ -26,7 +28,7 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="header__logo-image" src="img/logo-mobile.svg" width="32" height="36" alt="Логотип интернет-магазина кофейных напитков Drink2go.">
           </picture>
-          <span class="header__logo-text">Интернет-магазин <br>кофейных напитков</span>
+          <span class="header__logo-text">Интернет-магазин кофейных&nbsp;напитков</span>
         </a>
         <ul class="site-list site-list--close site-list--no-js">
           <li>
@@ -89,7 +91,7 @@
               <div class="promo__description">
                 <span class="promo__badge badge">Новинка!</span>
                 <h3 class="promo__heading">Декаф Флэт Уайт</h3>
-                <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                <p class="promo__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="promo__price-wrapper">
                   <span class="promo__old-price">295₽</span>
                   <span class="promo__new-price">225₽</span>
@@ -156,7 +158,7 @@
           </div>
           <div class="features__item features__item--fit">
             <dt class="features__name">Удобство</dt>
-            <dd class="features__value">Легко помещается и в карман,и в маленькую сумочку</dd>
+            <dd class="features__value">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</dd>
           </div>
           <div class="features__item features__item--energy">
             <dt class="features__name">Бодрость</dt>
@@ -164,7 +166,7 @@
           </div>
           <div class="features__item features__item--ecology">
             <dt class="features__name">Экологичность</dt>
-            <dd class="features__value">Вся упаковка сделана из перерабатываемых материалов</dd>
+            <dd class="features__value">Вся упаковка сделана из&nbsp;перерабатываемых материалов</dd>
           </div>
         </dl>
       </section>
@@ -243,7 +245,7 @@
               <label class="sort-form__label" for="costa-rica">Коста-Рика</label>
             </p>
             <p class="sort-form__input">
-              <input class="sort-form__checkbox visually-hidden" type="checkbox" id="peru" name="peru">
+              <input class="sort-form__checkbox visually-hidden" type="checkbox" id="peru" name="peru" disabled>
               <span class="sort-form__checkbox-mark"></span>
               <label class="sort-form__label" for="peru">Перу</label>
             </p>
@@ -252,7 +254,6 @@
             <button class="sort-form__button sort-form__button--apply button" type="button">Применить фильтр</button>
           <button class="sort-form__button sort-form__button--reset button" type="reset">Сбросить фильтр</button>
           </div>
-          
           <div class="sort-form__element sort-form__element--sort">
             <label class="sort-form__legend sort-form__legend--sort" for="sort">Сортировка:</label>
             <select class="sort-form__select" id="sort">
@@ -273,12 +274,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
           <li class="product-card">
@@ -289,12 +285,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
           <li class="product-card">
@@ -305,12 +296,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии c&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
           <li class="product-card">
@@ -321,12 +307,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
           <li class="product-card">
@@ -337,12 +318,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
           <li class="product-card">
@@ -353,12 +329,7 @@
             <p class="product-card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
             <div class="product-card__footer">
               <b class="product-card__price">225₽</b>
-              <a class="product-card__button" href="#">
-                <svg class="product-card__button-icon" width="20" height="16">
-                  <use href="img/icons/stack.svg#add-cart"></use>
-                </svg>
-                В корзину
-              </a>
+              <a class="product-card__button button" href="#">В корзину</a>
             </div>
           </li>
         </ul>
@@ -368,9 +339,6 @@
             <li class="pagination__item">
               <a class="pagination__link pagination__link--prev" href="#">
                 <span class="visually-hidden">Предыдущая страница.</span>
-                <svg class="pagination__link-icon pagination__link-icon--prev" width="10" height="10">
-                  <use href="img/icons/stack.svg#arrow-right-pagination"></use>
-                </svg>
               </a>
             </li>
             <li class="pagination__item">
@@ -385,9 +353,6 @@
             <li class="pagination__item">
               <a class="pagination__link pagination__link--next" href="#">
                 <span class="visually-hidden">Следующая страница.</span>
-                <svg class="pagination__link-icon pagination__link-icon--prev" width="10" height="10">
-                  <use href="img/icons/stack.svg#arrow-right-pagination"></use>
-                </svg>
               </a>
             </li>
           </ul>
@@ -438,58 +403,59 @@
             </a>
           </li>
         </ul>
+      </div>
 
-        <div class="footer__nav">
-          <div class="footer__nav-item">
-            <h3 class="footer__header">Интернет-магазин</h3>
-            <ul class="footer__list">
-              <li>
-                <a class="footer__link" href="#">Каталог</a>
-              </li>
-              <li>
-                <a class="footer__link" href="#">Доставка</a>
-              </li>
-              <li>
-                <a class="footer__link" href="#">Способы оплаты</a>
-              </li>
-              <li>
-                <a class="footer__link" href="#">О нас</a>
-              </li>
-            </ul>
-          </div>
+      <div class="footer__nav">
+        <div class="footer__nav-item">
+          <h3 class="footer__header">Интернет-магазин</h3>
+          <ul class="footer__list">
+            <li>
+              <a class="footer__link" href="#">Каталог</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Доставка</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Способы оплаты</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </div>
 
-          <div class="footer__nav-item">
-            <h3 class="footer__header">Медиа</h3>
-            <ul class="footer__list">
-              <li>
-                <a class="footer__link" href="#">Блог</a>
-              </li>
-              <li>
-                <a class="footer__link" href="#">Информация для СМИ</a>
-              </li>
-              <li>
-                <a class="footer__link" href="#">Правовая информация</a>
-              </li>
-            </ul>
-          </div>
+        <div class="footer__nav-item">
+          <h3 class="footer__header">Медиа</h3>
+          <ul class="footer__list">
+            <li>
+              <a class="footer__link" href="#">Блог</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Информация для СМИ</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
 
-          <div class="footer__nav-item">
-            <h2 class="footer__header">Контакты</h2>
-            <ul class="footer__list">
-              <li>
-                <a class="footer__link" href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
-              </li>
-              <li>
-                <a class="footer__link" href="tel:+79999999999">+7 (999) 999-99-99</a>
-              </li>
-            </ul>
-          </div>
+        <div class="footer__nav-item">
+          <h2 class="footer__header footer__header--contacts">Контакты</h2>
+          <ul class="footer__list">
+            <li>
+              <a class="footer__link footer__link--address" href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            </li>
+            <li>
+              <a class="footer__link footer__link--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </li>
+          </ul>
         </div>
       </div>
 
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано в
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy.">HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy.">
+            HTML Academy
             <svg class="copyright__icon" width="12" height="16">
               <use href="img/icons/stack.svg#logo-htmlacademy"></use>
             </svg>
@@ -500,7 +466,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
-    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     <script src="js/map.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
