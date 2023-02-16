@@ -6,6 +6,12 @@
   flex-wrap: wrap;
   margin-bottom: 25px;
 
+  &--price {
+    @media (min-width: @tablet-width) {
+      height: 130px;
+    }
+  }
+
   &--have-milk {
     flex-direction: column;
   }
@@ -19,6 +25,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1/-1;
+      justify-content: flex-end;
+      
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+
+    &--sort {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -30,12 +50,20 @@
   margin-bottom: 22px;
   padding: 0;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
   &--max-price {
     text-align: center;
     align-self: center;
     width: 44px;
     color: @base-grey;
     margin: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 34px;
+    }
   }
 
   &--sort {
@@ -62,6 +90,10 @@
 
   &:active {
     color: @base-black;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 93px;
   }
 }
 
@@ -156,6 +188,14 @@
   row-gap: 25px;
   padding: 0 60px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    column-gap: 30px;
+    padding: 0 180px;
+    margin-bottom: 4px;
+  }
 }
 
 .sort-form__button {

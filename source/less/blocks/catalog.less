@@ -1,6 +1,10 @@
 .catalog {
   background-color: @bg-lightest-grey;
   padding: 50px 20px 44px;
+
+  @media (min-width: @tablet-width) {
+    padding: 80px 20px 90px;
+  }
 }
 
 .catalog__title {
@@ -13,6 +17,12 @@
 
 .catalog__form {
   padding: 20px 0 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 21px;
+  }
 }
 
 .catalog__list {
@@ -22,4 +32,10 @@
   list-style-type: none;
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
 }

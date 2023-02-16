@@ -4,6 +4,16 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.pagination__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .pagination__link {
@@ -30,6 +40,10 @@
     background-position: center;
     background-size: contain;
     background-image: url("../../img/icons/stack.svg#arrow-right-pagination");
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   &--prev::before {
@@ -40,5 +54,15 @@
     background-color: transparent;
     font-weight: 600;
     color: @base-black;
+  }
+}
+
+.pagination__link-text {
+  @media (max-width: @mobile-width-only) {
+    .visually-hidden;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 20px;
   }
 }

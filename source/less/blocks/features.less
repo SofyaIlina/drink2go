@@ -1,6 +1,10 @@
 .features {
   text-align: center;
   padding: 50px 20px 28px;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 30px 100px;
+  }
 }
 
 .features__title {
@@ -14,12 +18,25 @@
 
 .features__list {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
 }
 
 .features__item {
   padding-top: 66px;
   margin-bottom: 32px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    padding-left: 72px;
+  }
 
   &::before {
     content: "";
@@ -32,6 +49,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      top: 2px;
+      left: 26px;
+    }
   }
 
   &--speed::before {
