@@ -1,3 +1,9 @@
+.sort-form {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
 .sort-form__element {
   margin: 0;
   border: 0;
@@ -5,12 +11,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 25px;
-
-  &--price {
-    @media (min-width: @tablet-width) {
-      height: 130px;
-    }
-  }
 
   &--have-milk {
     flex-direction: column;
@@ -25,19 +25,26 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-
-    @media (min-width: @tablet-width) {
-      grid-column: 1/-1;
-      justify-content: flex-end;
-      
-    }
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
 
+    &--price {
+      height: 130px;
+    }
+
     &--sort {
       margin-bottom: 30px;
+      grid-column: 1/-1;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--sort {
+      position: absolute;
+      right: -1040px;
     }
   }
 }
@@ -50,30 +57,46 @@
   margin-bottom: 22px;
   padding: 0;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
-  }
-
   &--max-price {
     text-align: center;
     align-self: center;
     width: 44px;
     color: @base-grey;
     margin: 0;
-
-    @media (min-width: @tablet-width) {
-      width: 34px;
-    }
   }
 
   &--sort {
     width: auto;
     margin: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+
+    &--max-price {
+      width: 34px;
+    }
+
+    &--sort {
+      margin: 0;
+      margin-right: 6px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--max-price {
+      width: 50px;
+      margin: 0;
+    }
+  }
 }
 
 .sort-form__range {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    margin-left: 6px;
+  }
 }
 
 .sort-form__input-range {
@@ -92,8 +115,16 @@
     color: @base-black;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     width: 93px;
+
+    &--min {
+      margin-left: 6px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
   }
 }
 
@@ -184,17 +215,22 @@
 }
 
 .sort-form__button-wrapper {
-  display: grid;
-  row-gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 60px;
   margin-bottom: 40px;
 
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column: 1/-1;
-    column-gap: 30px;
     padding: 0 180px;
     margin-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    align-items: flex-start;
   }
 }
 
@@ -205,6 +241,27 @@
   &--reset {
     color: @base-primary;
     background-color: @base-white;
+    margin-left: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    padding: 8px 3px;
+
+    &--reset {
+      margin-left: 30px;
+      padding: 8px 5px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 4px;
+    padding-right: 5px;
+
+    &--reset {
+      margin-left: 20px;
+      padding: 8px 11px;
+    }
   }
 }
 
@@ -218,4 +275,8 @@
   background-color: transparent;
   width: 165px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 169px;
+  }
 }

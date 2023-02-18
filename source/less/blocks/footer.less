@@ -1,17 +1,55 @@
+.footer {
+  @media (min-width: @desktop-width) {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .footer__social {
   display: flex;
   justify-content: space-between;
   padding: 22px 20px;
   border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 20px 9px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-self: flex-start;
+  }
 }
 
 .footer__logo {
   display: flex;
   align-self: center;
+  text-decoration: none;
+  color: @base-black;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.footer__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 170px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__logo-text {
-  @media (max-width: @mobile-width-only) {
+  @media (max-width: @desktop-width) {
     display: none;
   }
 }
@@ -26,7 +64,11 @@
 }
 
 .footer__social-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .footer__social-link {
@@ -37,9 +79,34 @@
   align-items: center;
 }
 
+.footer__nav {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px;
+    column-gap: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3,318px);
+    padding: 0;
+    padding-left: 42px;
+    gap: 30px;
+  }
+}
+
 .footer__nav-item {
   padding: 20px;
   border-bottom: 1px solid @base-secondary;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 49px;
+  }
 }
 
 .footer__header {
@@ -106,5 +173,17 @@
     &::before {
       background-image: url("../../img/icons/stack.svg#pin");
     }
+  }
+}
+
+.footer__copyright {
+  padding: 20px 20px 30px;
+
+  @media (min-width: @tablet-width) {
+   padding: 10px 0 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
   }
 }

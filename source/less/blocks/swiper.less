@@ -14,12 +14,22 @@
 
   @media (min-width: @tablet-width) {
     width: 60px;
+    top: -72px;
+    left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 22px;
   }
 }
 
 .swiper .swiper-button-next {
   left: auto;
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    right: 9px;
+  }
 }
 
 .swiper-pagination {
@@ -27,11 +37,11 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
 }
 
-.swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet {
   width: 62px;
   height: 4px;
   background-color: @base-white;
@@ -57,6 +67,6 @@
   }
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet-active {
   background-color: @base-primary;
 }

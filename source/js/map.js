@@ -1,21 +1,26 @@
 const image = document.querySelector('.map__image');
 const map = L.map('map-canvas');
 
-const ZOOM = 19;
+const ZOOM = 20;
 
 const MAP_CENTER = {
-  lat: 59.968400,
-  lng: 30.317523,
+  lat: 59.968385,
+  lng: 30.317392,
+};
+
+const PIN_CENTER = {
+  lat: 59.968321,
+  lng: 30.317462,
 };
 
 const pinIcon = L.icon({
-  iconUrl: '../img/map/map-pin.svg',
+  iconUrl: '../img/icons/stack.svg#map-pin',
   iconSize: [38, 50],
   iconAnchor: [19, 50],
 });
 
 const marker = L.marker(
-  MAP_CENTER,
+  PIN_CENTER,
   {
     icon: pinIcon,
   }

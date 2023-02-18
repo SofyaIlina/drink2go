@@ -9,6 +9,11 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
@@ -21,15 +26,31 @@
 
   @media (min-width: @tablet-width) {
     min-height: 80px;
+    margin-right: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
   }
 }
 
 .header__logo-image {
-  width: 82px;
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    margin-right: 20px;
+  }
 }
 
 .header__logo-text {
-  @media (max-width: @tablet-width) {
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (max-width: @desktop-width) {
     display: none;
   }
 }

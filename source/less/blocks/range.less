@@ -1,6 +1,10 @@
 .range {
   padding: 12px 0;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 0;;
+  }
 }
 
 .range__scale {
@@ -19,7 +23,11 @@
   background-color: @primary-lighter;
 
   @media (min-width: @tablet-width) {
-    width: 189px;
+    width: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 270px;
   }
 }
 
@@ -38,9 +46,17 @@
 
   &--max {
     left: 228px;
+  }
 
-    @media (min-width: @tablet-width) {
-     left: 180px;
+  @media (min-width: @tablet-width) {
+    &--max {
+       left: 169px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--max {
+       left: 266px;
     }
   }
 }
