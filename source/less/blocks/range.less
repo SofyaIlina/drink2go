@@ -48,6 +48,11 @@
     left: 228px;
   }
 
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     &--max {
        left: 169px;
@@ -59,4 +64,21 @@
        left: 266px;
     }
   }
+}
+
+.range__toggle:hover::before,
+.range__toggle:focus::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background-color: @primary-opacity;
+}
+
+.range__toggle:active::before {
+  background-color: @base-primary;
 }

@@ -49,6 +49,29 @@
   }
 }
 
+.sort-form__element--disabled .range__bar {
+  background-color: @base-grey;
+
+}
+
+.sort-form__element--disabled .range__toggle {
+  border-color: @base-grey;
+  cursor: auto;
+
+  &:hover::before,
+  &:focus::before {
+    display: none;
+  }
+}
+
+.sort-form__element--disabled .sort-form__input-range:disabled {
+  border-color: @light-grey;
+
+  &:active {
+    color: @base-grey;
+  }
+}
+
 .sort-form__legend {
   font-size: 16px;
   line-height: 24px;
@@ -111,6 +134,15 @@
   line-height: 24px;
   text-align: center;
 
+  &::placeholder {
+    color: @base-grey;
+  }
+
+  &:focus {
+    border-color: @primary-darker;
+    outline: none;
+  }
+
   &:active {
     color: @base-black;
   }
@@ -149,6 +181,26 @@
   margin-right: 10px;
 }
 
+.sort-form__radio:hover + .sort-form__radio-mark,
+.sort-form__radio:focus + .sort-form__radio-mark {
+  border-color: @primary-lighter;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: @primary-opacity;
+  }
+}
+
 .sort-form__radio:checked + .sort-form__radio-mark {
   border-color: @base-primary;
   position: relative;
@@ -172,6 +224,27 @@
 .sort-form__radio:disabled ~ .sort-form__label {
   border-color: @light-grey;
   color: @light-grey;
+}
+
+.sort-form__radio:disabled:hover + .sort-form__radio-mark,
+.sort-form__radio:disabled:focus + .sort-form__radio-mark {
+  &::before {
+    display: none;
+  }
+}
+
+.sort-form__radio:checked:disabled + .sort-form__radio-mark,
+.sort-form__radio:checked:disabled + .sort-form__radio-mark {
+  &::before {
+    background-color: @light-grey;
+  }
+}
+
+.sort-form__radio:checked:disabled:hover + .sort-form__radio-mark,
+.sort-form__radio:checked:disabled:focus + .sort-form__radio-mark {
+  &::before {
+    display: block;
+  }
 }
 
 .sort-form__checkbox-mark {
@@ -206,8 +279,42 @@
   }
 }
 
+.sort-form__checkbox:hover + .sort-form__checkbox-mark,
+.sort-form__checkbox:focus + .sort-form__checkbox-mark {
+  border: 2px solid @primary-lighter;
+  background-color: @primary-opacity;
+
+  &::before {
+    left: 0;
+  }
+}
+
 .sort-form__checkbox:disabled + .sort-form__checkbox-mark {
   background-color: @light-grey;
+}
+
+.sort-form__checkbox:disabled:hover + .sort-form__checkbox-mark,
+.sort-form__checkbox:disabled:focus + .sort-form__checkbox-mark {
+  border: none;
+
+  &::before {
+    left: 2px;
+  }
+}
+
+.sort-form__checkbox:checked:disabled + .sort-form__checkbox-mark,
+.sort-form__checkbox:checked:disabled + .sort-form__checkbox-mark {
+  &::before {
+    background-color: @base-grey;
+  }
+}
+
+.sort-form__checkbox:checked:disabled:hover + .sort-form__checkbox-mark,
+.sort-form__checkbox:checked:disabled:focus + .sort-form__checkbox-mark {
+  &::before {
+    left: auto;
+    right: 2px;
+  }
 }
 
 .sort-form__checkbox:disabled ~ .sort-form__label {
@@ -242,6 +349,16 @@
     color: @base-primary;
     background-color: @base-white;
     margin-left: 25px;
+
+    &:hover {
+      color: @base-white;
+    }
+
+    &:disabled {
+      cursor: auto;
+      color: @base-white;
+      background-color: @light-grey;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -270,11 +387,19 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  padding: 4px 11px 4px 10px;
   color: @base-primary;
   border: none;
+  border-radius: 4px;
   background-color: transparent;
   width: 165px;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     width: 169px;

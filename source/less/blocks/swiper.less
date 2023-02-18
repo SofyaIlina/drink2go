@@ -12,6 +12,26 @@
     font-size: 20px;
   }
 
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, @base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient(90deg, @primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    color: @base-grey;
+    cursor: auto;
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+    
+  }
+
   @media (min-width: @tablet-width) {
     width: 60px;
     top: -72px;
@@ -26,6 +46,15 @@
 .swiper .swiper-button-next {
   left: auto;
   right: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(270deg, @base-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(270deg, @primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+  }
 
   @media (min-width: @tablet-width) {
     right: 9px;
@@ -52,6 +81,7 @@
   &:hover,
   &:focus {
     background-color: @primary-opacity;
+    outline: none;
   }
 
   &:focus:not(:focus-visible) {

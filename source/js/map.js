@@ -14,7 +14,7 @@ const PIN_CENTER = {
 };
 
 const pinIcon = L.icon({
-  iconUrl: '../img/icons/stack.svg#map-pin',
+  iconUrl: '../img/map/map-pin.svg',
   iconSize: [38, 50],
   iconAnchor: [19, 50],
 });

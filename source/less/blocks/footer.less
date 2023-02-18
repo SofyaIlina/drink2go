@@ -77,6 +77,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @primary-opacity;
+  }
+}
+
+.footer__social-icon {
+  color: @base-grey;
+}
+
+.footer__social-link:hover .footer__social-icon,
+.footer__social-link:focus .footer__social-icon {
+  color: @base-primary;
 }
 
 .footer__nav {
@@ -173,6 +193,11 @@
     &::before {
       background-image: url("../../img/icons/stack.svg#pin");
     }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 }
 
