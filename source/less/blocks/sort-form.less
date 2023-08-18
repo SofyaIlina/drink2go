@@ -1,9 +1,3 @@
-.sort-form {
-  @media (min-width: @desktop-width) {
-    position: relative;
-  }
-}
-
 .sort-form__element {
   margin: 0;
   border: 0;
@@ -24,7 +18,8 @@
   &--sort {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 17px;
   }
 
   @media (min-width: @tablet-width) {
@@ -32,6 +27,7 @@
 
     &--price {
       height: 130px;
+      align-items: flex-start;
     }
 
     &--sort {
@@ -51,7 +47,6 @@
 
 .sort-form__element--disabled .range__bar {
   background-color: @base-grey;
-
 }
 
 .sort-form__element--disabled .range__toggle {
@@ -116,6 +111,7 @@
 
 .sort-form__range {
   margin-bottom: 25px;
+  width: 100%;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     margin-left: 6px;
@@ -132,7 +128,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  text-align: center;
 
   &::placeholder {
     color: @base-grey;
@@ -166,10 +161,10 @@
   font-size: 16px;
   line-height: 24px;
   display: flex;
-}
 
-.sort-form__input:last-child {
-  margin: 0;
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .sort-form__radio-mark {
@@ -197,6 +192,12 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
+    background-color: @primary-opacity;
+  }
+}
+
+.sort-form__radio:checked:focus-visible + .sort-form__radio-mark {
+  &::before {
     background-color: @primary-opacity;
   }
 }
@@ -233,7 +234,6 @@
   }
 }
 
-.sort-form__radio:checked:disabled + .sort-form__radio-mark,
 .sort-form__radio:checked:disabled + .sort-form__radio-mark {
   &::before {
     background-color: @light-grey;
@@ -289,6 +289,17 @@
   }
 }
 
+.sort-form__checkbox:checked:hover + .sort-form__checkbox-mark,
+.sort-form__checkbox:checked:focus + .sort-form__checkbox-mark {
+  border: none;
+  background-color: @base-primary;
+
+  &::before {
+    left: auto;
+    right: 2px;
+  }
+}
+
 .sort-form__checkbox:disabled + .sort-form__checkbox-mark {
   background-color: @light-grey;
 }
@@ -302,7 +313,6 @@
   }
 }
 
-.sort-form__checkbox:checked:disabled + .sort-form__checkbox-mark,
 .sort-form__checkbox:checked:disabled + .sort-form__checkbox-mark {
   &::before {
     background-color: @base-grey;
@@ -325,7 +335,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 60px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-column: 1/-1;
@@ -344,13 +354,16 @@
 .sort-form__button {
   font-size: 13px;
   padding: 11px 14px;
+  width: 100%;
 
   &--reset {
+    font-size: 14px;
     color: @base-primary;
     background-color: @base-white;
-    margin-left: 25px;
+    margin-top: 24px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: @base-white;
     }
 
@@ -364,8 +377,10 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     padding: 8px 3px;
+    width: auto;
 
     &--reset {
+      margin: 0;
       margin-left: 30px;
       padding: 8px 5px;
     }
@@ -387,21 +402,23 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  padding: 4px 11px 4px 10px;
+  padding: 4px 0 4px 10px;
   color: @base-primary;
   border: none;
   border-radius: 4px;
   background-color: transparent;
-  width: 165px;
+  width: 172px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 164px;
+    padding: 0;
+    margin-right: 6px;
+  }
 
   &:hover,
   &:focus {
     background-color: @base-secondary;
     outline: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 169px;
   }
 }

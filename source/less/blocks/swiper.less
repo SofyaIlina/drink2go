@@ -25,11 +25,11 @@
   &:disabled {
     color: @base-grey;
     cursor: auto;
+
     &:hover,
     &:focus {
       background: transparent;
     }
-    
   }
 
   @media (min-width: @tablet-width) {
@@ -47,6 +47,10 @@
   left: auto;
   right: 0;
 
+  @media (min-width: @tablet-width) {
+    right: 9px;
+  }
+
   &:hover,
   &:focus {
     background: linear-gradient(270deg, @base-white 0%, rgba(255, 255, 255, 0) 100%);
@@ -55,10 +59,6 @@
   &:active {
     background: linear-gradient(270deg, @primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
   }
-
-  @media (min-width: @tablet-width) {
-    right: 9px;
-  }
 }
 
 .swiper-pagination {
@@ -66,7 +66,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin-bottom: 55px;
+    padding-bottom: 55px;
   }
 }
 

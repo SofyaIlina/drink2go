@@ -45,20 +45,10 @@
     background-position: center;
     background-size: contain;
     background-image: url("../../img/icons/stack.svg#arrow-right-pagination");
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
   }
 
   &--prev::before {
     transform: rotate(180deg);
-  }
-
-  &--current {
-    background-color: transparent;
-    font-weight: 600;
-    color: @base-black;
   }
 
   &:hover,
@@ -87,6 +77,19 @@
   &--first-page,
   &--last-page {
     opacity: 0;
+  }
+
+  &--current {
+    background-color: transparent;
+    font-weight: 600;
+    color: @base-black;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--next::before,
+    &--prev::before {
+      display: none;
+    }
   }
 }
 

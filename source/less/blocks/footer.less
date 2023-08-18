@@ -1,4 +1,4 @@
-.footer {
+.footer__wrapper {
   @media (min-width: @desktop-width) {
     max-width: 1400px;
     margin: 0 auto;
@@ -10,7 +10,7 @@
 .footer__social {
   display: flex;
   justify-content: space-between;
-  padding: 22px 20px;
+  padding: 20px 20px;
   border-bottom: 1px solid @base-secondary;
 
   @media (min-width: @tablet-width) {
@@ -43,13 +43,14 @@
   @media (min-width: @tablet-width) {
     width: 170px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 10px;
   }
 }
 
 .footer__logo-text {
-  @media (max-width: @desktop-width) {
+  @media (max-width: @tablet-width-only) {
     display: none;
   }
 }
@@ -61,14 +62,19 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 160px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 510px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 285px;
+  }
 }
 
 .footer__social-item:not(:last-child) {
-  margin-right: 25px;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 20px;
-  }
+  margin-right: 20px;
 }
 
 .footer__social-link {
@@ -108,7 +114,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3,318px);
+    grid-template-columns: repeat(3, 318px);
     padding: 0;
     padding-left: 42px;
     gap: 30px;
@@ -121,11 +127,11 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding: 20px 0;
+    padding: 20px 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 49px;
+    padding: 49px 0 20px;
   }
 }
 
@@ -189,7 +195,7 @@
 
   &--address {
     margin-bottom: 12px;
-    
+
     &::before {
       background-image: url("../../img/icons/stack.svg#pin");
     }
@@ -198,6 +204,11 @@
   &:hover,
   &:focus {
     outline: none;
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
   }
 }
 
@@ -205,7 +216,7 @@
   padding: 20px 20px 30px;
 
   @media (min-width: @tablet-width) {
-   padding: 10px 0 40px;
+    padding: 10px 0 40px;
   }
 
   @media (min-width: @tablet-width) {

@@ -1,4 +1,4 @@
-.features {
+.features__wrapper {
   text-align: center;
   padding: 50px 20px 28px;
 
@@ -40,7 +40,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
 }
@@ -49,19 +49,6 @@
   padding-top: 66px;
   margin-bottom: 32px;
   position: relative;
-
-  @media (min-width: @tablet-width) {
-    text-align: start;
-    margin: 0;
-    padding: 0;
-    padding-left: 72px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    padding-top: 76px;
-    text-align: center;
-  }
 
   &::before {
     content: "";
@@ -74,11 +61,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-      top: 2px;
-      left: 26px;
-    }
   }
 
   &--speed::before {
@@ -95,6 +77,26 @@
 
   &--ecology::before {
     background-image: url("../../img/icons/stack.svg#ecology");
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    &::before {
+      top: 2px;
+      left: 26px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 76px;
+    text-align: center;
   }
 }
 

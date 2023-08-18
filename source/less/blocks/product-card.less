@@ -1,11 +1,17 @@
 .product-card {
-  display: flex;
-  flex-direction: column;
   background-color: @base-white;
   padding: 40px 20px 20px;
+  border-radius: 4px;
 
   @media (min-width: @tablet-width) {
     padding: 50px 30px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -51,6 +57,7 @@
 .product-card__footer {
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .product-card__price {

@@ -3,7 +3,7 @@
   padding: 0;
   text-align: center;
   list-style-type: none;
-  
+
   @media (max-width: @mobile-width-only) {
     position: absolute;
     top: 60px;
@@ -21,10 +21,6 @@
       position: static;
       order: 1;
     }
-  }
-
-  @media (min-width: @tablet-width) {
-    display: flex;
   }
 }
 
@@ -49,10 +45,6 @@
   border-bottom: 1px solid @base-secondary;
   min-height: 60px;
 
-  &:active {
-    background-color: @base-secondary;
-  }
-
   @media (min-width: @tablet-width) {
     padding: 0 20px;
     border: none;
@@ -62,5 +54,9 @@
       color: @base-primary;
       border-bottom: 2px solid;
     }
+  }
+
+  &:active {
+    background-color: @base-secondary;
   }
 }
